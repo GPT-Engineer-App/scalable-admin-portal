@@ -5,6 +5,10 @@ import ProjectList from "./pages/ProjectList.jsx";
 import ProjectDetail from "./pages/ProjectDetail.jsx";
 import CreateProject from "./pages/CreateProject.jsx";
 import EditProject from "./pages/EditProject.jsx";
+import UserList from "./pages/UserList.jsx";
+import UserDetail from "./pages/UserDetail.jsx";
+import CreateUser from "./pages/CreateUser.jsx";
+import EditUser from "./pages/EditUser.jsx";
 
 function App() {
   return (
@@ -16,6 +20,10 @@ function App() {
         <Route path="/projects/:id" element={<ProjectDetail />} />
         <Route path="/projects/create" element={<CreateProject />} />
         <Route path="/projects/:id/edit" element={<EditProject />} />
+        <Route path="/users" element={<UserList />} />
+        <Route path="/users/:id" element={<UserDetail />} />
+        <Route path="/users/create" element={<CreateUser />} />
+        <Route path="/users/:id/edit" element={<EditUser />} />
       </Routes>
     </Router>
   );
