@@ -1,15 +1,37 @@
-// Update this page (the content is just a fallback if you fail and example)
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const Index = () => {
   return (
-    <div className="h-screen w-screen flex items-center justify-center">
-      {/* Update with components here - default to put new layout sections as separate components in the components folder, and import them here */}
-      <div>
-        <h1 className="text-3xl text-center">Your Blank Canvas</h1>
-        <p className="text-center">
-          Chat with the agent to start making edits.
-        </p>
-      </div>
+    <div className="h-screen w-screen flex flex-col items-center justify-center space-y-6">
+      <Card className="w-96">
+        <CardHeader>
+          <CardTitle className="text-center">Welcome to Admin Portal</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <Alert>
+            <AlertTitle>Heads up!</AlertTitle>
+            <AlertDescription>
+              This is a sample alert to grab your attention.
+            </AlertDescription>
+          </Alert>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger>
+                <Button variant="outline" className="w-full">
+                  Hover me
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>This is a tooltip example.</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </CardContent>
+      </Card>
     </div>
   );
 };
